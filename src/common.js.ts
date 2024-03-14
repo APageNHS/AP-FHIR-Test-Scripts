@@ -876,6 +876,8 @@ export function testFile( folderName: string, fileName: string, failOnWarning :b
                     const response = await client.post('/$validate', resource).catch(function (error) {
                         return error.response
                     })
+console.log('Response:', response == undefined);
+console.log('Status:', response.status);
                     expect(response.status === 200 || response.status === 400).toBeTruthy()
                     
                     //we can ignore warnings on retired resources - these would not be in a balloted package
