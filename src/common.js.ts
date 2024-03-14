@@ -877,8 +877,9 @@ export function testFile( folderName: string, fileName: string, failOnWarning :b
                         return error.response
                     })
 console.log('File:', json.id);
-console.log('Response:', response == undefined);
-console.log('Status:', response.status);
+			if (response.status == 500) {
+console.log('Response:', response.data);
+			}
                     expect(response.status === 200 || response.status === 400).toBeTruthy()
                     
                     //we can ignore warnings on retired resources - these would not be in a balloted package
