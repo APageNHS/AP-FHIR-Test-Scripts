@@ -31,7 +31,7 @@ jobs:
       - name: Check out IOPS-Validation
         uses: actions/checkout@master
         with:
-          repository: NHSDigital/IOPS-FHIR-Test-Scripts # orignally known as NHSDigital/IOPS-Validation
+          repository: APageNHS/AP-FHIR-Test-Scripts # orignally known as NHSDigital/IOPS-Validation
           path: validation
 
       - name: Check out validation-service-fhir-r4
